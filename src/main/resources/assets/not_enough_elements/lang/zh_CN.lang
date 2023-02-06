@@ -1,0 +1,2 @@
+NotEnoughElements.Message.ElementsContaining=手持的物品有以下元素: %s
+NotEnoughElements.Message.NoElementContaining=手持的物品不具有元素

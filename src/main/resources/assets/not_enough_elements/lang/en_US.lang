@@ -1,0 +1,2 @@
+NotEnoughElements.Message.ElementsContaining=The held item contains: %s
+NotEnoughElements.Message.NoElementContaining=The held item contains nothing
