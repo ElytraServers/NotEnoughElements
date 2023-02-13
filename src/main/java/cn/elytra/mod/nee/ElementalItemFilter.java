@@ -4,8 +4,6 @@ import codechicken.nei.api.ItemFilter;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import gregtech.api.enums.Element;
-import gregtech.api.objects.ItemData;
-import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.item.ItemStack;
 
 import java.util.Map;
@@ -54,10 +52,7 @@ public class ElementalItemFilter implements ItemFilter {
 	public boolean matches(ItemStack itemStack) {
 		if(includedElements.isEmpty()) return true;
 
-		ItemData data = GT_OreDictUnificator.getItemData(itemStack);
-		if(data == null) return false;
-
-		Set<Element> c = GregTechUtil.getContainingElements(data);
+		Set<Element> c = GregTechUtil.getContainingElements(itemStack);
 
 		boolean includedMatched = c.containsAll(includedElements);
 		boolean excludedMatched = c.stream().noneMatch(excludedElements::contains);

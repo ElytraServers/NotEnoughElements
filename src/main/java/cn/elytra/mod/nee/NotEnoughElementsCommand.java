@@ -1,8 +1,6 @@
 package cn.elytra.mod.nee;
 
 import gregtech.api.enums.Element;
-import gregtech.api.objects.ItemData;
-import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
@@ -31,9 +29,7 @@ public class NotEnoughElementsCommand extends CommandBase {
 		if(sender instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) sender;
 			ItemStack stack = player.getHeldItem();
-			ItemData data = GT_OreDictUnificator.getItemData(stack);
-
-			Set<Element> elements = GregTechUtil.getContainingElements(data);
+			Set<Element> elements = GregTechUtil.getContainingElements(stack);
 			IChatComponent message;
 			if(elements.size() > 0) {
 				message = new ChatComponentTranslation(
