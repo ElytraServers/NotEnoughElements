@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import java.util.Map;
 import java.util.Set;
 
+@Deprecated
 public class ElementalItemFilter implements ItemFilter {
 
 	/**

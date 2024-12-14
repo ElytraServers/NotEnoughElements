@@ -8,17 +8,17 @@ public class NEINotEnoughElementsConfig implements IConfigureNEI {
 	@Override
 	public void loadConfig() {
 		NotEnoughElementsMod.LOG.info("Not Enough Elements Search Provider initialized");
-		API.addSearchProvider(new ElementalFilterProvider());
+		API.addSearchProvider(ElementalItemFilterV2.ELEMENTAL_SEARCH_PARSER_PROVIDER);
 	}
 
 	@Override
 	public String getName() {
-		return Tags.MODNAME;
+		return Tags.GRADLETOKEN_MODNAME;
 	}
 
 	@Override
 	public String getVersion() {
-		return Tags.VERSION;
+		return Tags.GRADLETOKEN_VERSION;
 	}
 
 }

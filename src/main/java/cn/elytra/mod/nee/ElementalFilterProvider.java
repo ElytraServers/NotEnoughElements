@@ -3,6 +3,7 @@ package cn.elytra.mod.nee;
 import codechicken.nei.SearchField;
 import codechicken.nei.api.ItemFilter;
 
+@Deprecated
 public class ElementalFilterProvider implements SearchField.ISearchProvider {
 
 	private static final String LONG_PREFIX = "element:";

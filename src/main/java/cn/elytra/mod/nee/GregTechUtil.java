@@ -5,7 +5,7 @@ import gregtech.api.enums.Element;
 import gregtech.api.enums.Materials;
 import gregtech.api.objects.ItemData;
 import gregtech.api.objects.MaterialStack;
-import gregtech.api.util.GT_OreDictUnificator;
+import gregtech.api.util.GTOreDictUnificator;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
@@ -18,7 +18,7 @@ public class GregTechUtil {
 	public static Set<Element> getContainingElements(ItemStack stack) {
 		Set<Element> result = Sets.newHashSet();
 
-		readItemDataElements(result, GT_OreDictUnificator.getItemData(stack));
+		readItemDataElements(result, GTOreDictUnificator.getItemData(stack));
 		readContainingFluidElements(result, stack);
 
 		return result;
