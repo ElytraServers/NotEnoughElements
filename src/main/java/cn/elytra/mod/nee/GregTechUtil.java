@@ -24,6 +24,12 @@ public class GregTechUtil {
 		return result;
 	}
 
+	public static Set<Element> getContainingElementsNoNull(ItemStack stack) {
+		Set<Element> result = getContainingElements(stack);
+		result.remove(Element._NULL);
+		return result;
+	}
+
 	@Deprecated
 	public static Set<Element> getContainingElements(ItemData data) {
 		Set<Element> result = Sets.newHashSet();

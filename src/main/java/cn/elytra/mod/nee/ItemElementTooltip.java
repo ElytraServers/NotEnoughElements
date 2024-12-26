@@ -24,7 +24,7 @@ public class ItemElementTooltip {
 	private static class ItemElementTooltipCacheLoader extends CacheLoader<ItemStack, String[]> {
 		@Override
 		public String[] load(@NotNull ItemStack itemStack) {
-			Set<Element> elements = GregTechUtil.getContainingElements(itemStack);
+			Set<Element> elements = GregTechUtil.getContainingElementsNoNull(itemStack);
 
 			if (elements.isEmpty()) {
 				return new String[0];
